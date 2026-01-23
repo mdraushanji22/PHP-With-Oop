@@ -13,5 +13,5 @@ class Properties
     }
 }
 $p1 = new Properties();
-$p1->updateName("Jilani");
+$p1->updateName("Jilani, Peter");
 $p1->GetName();
