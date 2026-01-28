@@ -2,18 +2,34 @@
 class UserAuth
 {
 
-    function login($userName)
+    function login($userType)
     {
 
-        echo $userName . "Logged in";
+        echo $userType . "Logged in";
     }
 }
-class Students extends UserAuth {}
-class Teachers extends UserAuth {}
+class Students extends UserAuth
+{
+    function GetName()
+    {
+        echo "Raushan";
+    }
+}
+class Teachers extends UserAuth
+{
+    function TeacherName()
+    {
+        echo "Jilani";
+    }
+}
 
 $s1 = new Students();
 $s1->login("Student");
+echo "<br>";
+$s1->GetName();
 
 $t1 = new Teachers();
 echo "<br>";
 $t1->login("Teacher");
+echo "<br>";
+$t1->TeacherName();
