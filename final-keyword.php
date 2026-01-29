@@ -10,7 +10,6 @@ class BankAccount
 
 class SavingsAccount extends BankAccount
 {
-    // ❌ Not allowed: overriding final method
     // public function calculateInterest($amount) { }
 }
 
