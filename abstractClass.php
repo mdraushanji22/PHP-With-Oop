@@ -1,7 +1,7 @@
 <?php
 abstract class ProductFeatures
 {
-
+    public $countryName = " india";
     abstract function productDetails();
     abstract function productImage();
     abstract function productOwnerDetails();
@@ -22,6 +22,9 @@ class uploadProduct extends ProductFeatures
     }
 }
 $upload = new uploadProduct();
+echo "Country Name: " . $upload->countryName;
+echo "<br>";
+
 $upload->productDetails();
 echo "<br>";
 $upload->productImage();
