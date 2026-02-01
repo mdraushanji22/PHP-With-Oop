@@ -32,6 +32,34 @@ class Student
             echo "Operation failled";
         }
     }
+    function update()
+    {
+        $sqlQuery = "update students set
+         name ='Md Jilani',
+         course='MBA',
+         batch='evening',
+         city='delhi',
+         year='3rd'
+         where id=1";
+        $student = $this->DBconn->prepare($sqlQuery);
+        $result = $student->execute();
+        if ($result) {
+            echo "updated success";
+        } else {
+            echo "operation failled";
+        }
+    }
+    function dataDelete()
+    {
+        $sqlQuery = "delete from students where id=16";
+        $student = $this->DBconn->prepare($sqlQuery);
+        $result = $student->execute();
+        if ($result) {
+            echo "Deleted success";
+        } else {
+            echo "operation failled";
+        }
+    }
 }
 
 
@@ -39,3 +67,6 @@ class Student
 $student = new Student($conn);
 $student->getData();
 $student->insertData();
+echo "<br>";
+$student->update();
+$student->dataDelete();
